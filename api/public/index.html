@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>PPID Aksesibilitas</title>
+</head>
+<body style="font-family:sans-serif;max-width:600px;margin:auto;padding:20px">
+  <h1>Buat Link TTS</h1>
+  <form onsubmit="go(event)">
+    <input id="url" type="url" placeholder="https://ppid.kkp.go.id/upt/balai-kipm-tarakan/" style="width:100%;padding:8px">
+    <button type="submit" style="margin-top:10px">Buka versi TTS</button>
+  </form>
+  <script>
+    function go(e){
+      e.preventDefault();
+      const u = document.getElementById('url').value;
+      location.href = '/read?url=' + encodeURIComponent(u);
+    }
+  </script>
+</body>
+</html>
